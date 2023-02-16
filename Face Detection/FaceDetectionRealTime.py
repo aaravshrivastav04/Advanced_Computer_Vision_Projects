@@ -40,8 +40,6 @@ while True:
                 w = int(relative_bounding_box.width * width)
                 h = int(relative_bounding_box.height * height)
 
-                confs = []
-
                 if int(detection.score[0] * 100) > 80:
                     overlay = frame.copy()
                     cv2.rectangle(overlay, (x, y), (x + w, y + h), (255, 255, 255), -1)
